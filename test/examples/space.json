@@ -1,32 +1,150 @@
 {
-  "name": "Loot Owners",
-  "skin": "indexed",
-  "about": "",
-  "admins": [
-    "0xF296178d553C8Ec21A2fBD2c5dDa8CA9ac905A00"
-  ],
-  "avatar": "https://pbs.twimg.com/profile_images/1431587138202701826/lpgblc4h_400x400.jpg",
-  "github": "lootproject",
-  "symbol": "LOOT",
+  "name": "CoW DAO",
+  "about": "CoW DAO is stewarding the CoW Protocol Ecosystem. Start your proposal here: https://forum.cow.fi",
+  "terms": "https://gateway.pinata.cloud/ipfs/Qmf9MYhcG2pFrDoVy13p6FWeVF4nG9HbJvRfYYbhazTCFe",
+  "admins": [],
+  "avatar": "ipfs://bafkreidzkilw2bovq45cbqvohf6c65taw6yl5ufvpn5kacho5rybzwp6p4",
+  "domain": "https://vote.cow.fi/",
+  "github": "cowprotocol",
+  "symbol": "vCOW",
+  "voting": {
+    "type": "basic",
+    "period": 604800,
+    "hideAbstain": false
+  },
   "filters": {
-    "minScore": 1,
-    "onlyMembers": false
+    "minScore": 0,
+    "onlyMembers": true
   },
   "members": [],
   "network": "1",
-  "plugins": {},
-  "twitter": "lootproject",
+  "plugins": {
+    "safeSnap": {
+      "safes": [
+        {
+          "network": "1",
+          "umaAddress": "0x85f520D59deBD4c2902BB7f79ACbc3Dd4b5AB699"
+        }
+      ]
+    }
+  },
+  "private": false,
+  "twitter": "CoWSwap",
+  "website": "https://cow.fi/",
+  "children": [
+    "cowgrants.eth"
+  ],
+  "coingecko": "cow-protocol",
+  "categories": [
+    "protocol"
+  ],
+  "moderators": [],
   "strategies": [
     {
-      "name": "erc721",
+      "name": "erc20-balance-of",
       "params": {
-        "symbol": "LOOT",
-        "address": "0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7"
-      }
+        "symbol": "vCOW (mainnet)",
+        "address": "0xd057b63f5e69cf1b929b356b579cba08d7688048",
+        "decimals": 18
+      },
+      "network": "1"
+    },
+    {
+      "name": "erc20-balance-of",
+      "params": {
+        "symbol": "vCOW (GC)",
+        "address": "0xc20C9C13E853fc64d054b73fF21d3636B2d97eaB",
+        "decimals": 18
+      },
+      "network": "100"
+    },
+    {
+      "name": "erc20-balance-of-delegation",
+      "params": {
+        "symbol": "Delegated vCOW (Mainnet)",
+        "address": "0xd057b63f5e69cf1b929b356b579cba08d7688048",
+        "decimals": 18,
+        "delegationSpace": "cow.eth"
+      },
+      "network": "1"
+    },
+    {
+      "name": "erc20-balance-of-delegation",
+      "params": {
+        "symbol": "Delegated vCOW (GC)",
+        "address": "0xc20C9C13E853fc64d054b73fF21d3636B2d97eaB",
+        "decimals": 18,
+        "delegationSpace": "cow.eth"
+      },
+      "network": "100"
+    },
+    {
+      "name": "erc20-balance-of",
+      "params": {
+        "symbol": "COW (Mainnet)",
+        "address": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
+        "decimals": 18
+      },
+      "network": "1"
+    },
+    {
+      "name": "erc20-balance-of",
+      "params": {
+        "symbol": "COW (GC)",
+        "address": "0x177127622c4A00F3d409B75571e12cB3c8973d3c",
+        "decimals": 18
+      },
+      "network": "100"
+    },
+    {
+      "name": "erc20-balance-of-delegation",
+      "params": {
+        "symbol": "Delegate COW (Mainnet)",
+        "address": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
+        "decimals": 18,
+        "delegationSpace": "cow.eth"
+      },
+      "network": "1"
+    },
+    {
+      "name": "erc20-balance-of-delegation",
+      "params": {
+        "symbol": "Delegate COW (GC)",
+        "address": "0x177127622c4A00F3d409B75571e12cB3c8973d3c",
+        "decimals": 18,
+        "delegationSpace": "cow.eth"
+      },
+      "network": "100"
+    }
+  ],
+  "treasuries": [
+    {
+      "name": "CoW DAO main",
+      "address": "0xcA771eda0c70aA7d053aB1B25004559B918FE662",
+      "network": "1"
+    },
+    {
+      "name": "CoW DAO USDC",
+      "address": "0xA1cb7762F40318ee0260F53e15De835fF001cb7E",
+      "network": "1"
+    },
+    {
+      "name": "Treasury Safe mainnet",
+      "address": "0x616dE58c011F8736fa20c7Ae5352F7f6FB9F0669",
+      "network": "1"
+    },
+    {
+      "name": "Treasury Safe Gnosis Chain",
+      "address": "0x616dE58c011F8736fa20c7Ae5352F7f6FB9F0669",
+      "network": "100"
     }
   ],
   "validation": {
-    "name": "basic",
+    "name": "any",
+    "params": {}
+  },
+  "voteValidation": {
+    "name": "any",
     "params": {}
   }
 }
